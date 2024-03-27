@@ -26,7 +26,7 @@ const FetchTodos = () => {
         method: "PATCH",
         body: JSON.stringify({ todoStatus: true }),
       });
-
+      // @ts-ignore
       const resData = await res.json();
 
       mutate("/todos");
@@ -40,7 +40,7 @@ const FetchTodos = () => {
         method: "PATCH",
         body: JSON.stringify({ todoStatus: false }),
       });
-
+      // @ts-ignore
       const resData = await res.json();
 
       mutate("/todos");
@@ -53,7 +53,7 @@ const FetchTodos = () => {
       const res = await fetch(`http://127.0.0.1:8787/todos/${todoId}`, {
         method: "DELETE",
       });
-
+      // @ts-ignore
       const resData = await res.json();
 
       mutate("/todos");
